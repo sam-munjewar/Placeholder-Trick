@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+  <h1>Enter the text in input box to see the effect!</h1>
+ <div class="form-control">
+ <input placeholder="enter text here" class="firstInput">
+ <span class="test"></span>
+ </div>
+  <div class="form-control form-control-middle">
+ <input placeholder="enter text here" class="inputSecond">
+ <span class="spanSecond"></span>
+ </div>
+   <div class="form-control form-control-last">
+ <input placeholder="enter text here" class="inputLast">
+ <span class="spanLast"></span>
+ </div>
+<div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	
+var input = $('.firstInput'), 
+    otherInput = $('.inputSecond'),
+    lastInput = $('.inputLast'),
+    span = $('.test'),  
+    otherSpan = $('.spanSecond'),
+    lastSpan = $('.spanLast'); 
+
+
+input.bind('keydown keypress', function() {
+    setTimeout(function() {
+        span.text(input.val());
+    }, 0);
+});
+
+otherInput.bind('keydown keypress', function() {
+    setTimeout(function() {
+        otherSpan.text(otherInput.val());
+    }, 0);
+});
+
+ lastInput.bind('keydown keypress', function() {
+    setTimeout(function() {
+        lastSpan.text( lastInput.val());
+    }, 0);
+});
+
+
+
+</script>
+</body>
+</html>

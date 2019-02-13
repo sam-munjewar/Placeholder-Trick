@@ -1,0 +1,106 @@
+	*{
+      box-sizing: border-box;
+    }
+
+    body{
+      margin: 0;
+      background: #0052D4; 
+      background: -webkit-linear-gradient(to right, #6FB1FC, #4364F7, #0052D4);
+      background: linear-gradient(to right, #6FB1FC, #4364F7, #0052D4); 
+
+    }
+		.wrapper{
+      display: flex;
+    flex-direction: column;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+.form-control{
+    position: relative;
+    display:flex;
+    margin: 20px 0;
+}
+span{
+    display: inline-flex;
+    padding: 1.5em;
+    opacity: 0;
+    background-color:#7aa1fa;
+    color: #fff;
+    position: relative;
+    height: 40px;
+    width: 250px;
+    transition: opacity 0.5s ease-in-out;
+    box-sizing: border-box;
+    margin: 0 10px;
+    border-radius:4px;
+    min-height: 150px;
+    height: 100%;
+    font-family: monospace;
+    font-size: 15px;
+    word-break: break-word;
+    left: 53px;
+    top: 5px;
+}
+
+span.test:after,span.spanSecond:after,span.spanLast:after {
+    content: "";
+    transform: rotate(13deg);
+    display: block;
+    left: -67px;
+    position: absolute;
+    border-right: 90px solid #7aa1fa;
+    border-top: 0px solid transparent;
+    border-bottom: 40px solid transparent;
+    top: 15px;
+    z-index: -1;
+
+}
+span.spanSecond{
+  position: absolute;
+    left: -332px;
+}
+
+span.spanSecond:after{
+  transform: rotate(142deg);
+    right: -67px;
+    top: 8px;
+    position: absolute;
+    left: unset;
+}
+
+input:not(:placeholder-shown) + .test,input:not(:placeholder-shown) + .spanSecond,input:not(:placeholder-shown) + .spanLast{
+  opacity:1;
+}
+
+
+input{
+      height: 40px;
+    border: 2px solid #f1f1f1;
+    padding: 0 20px;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 15px;
+    color: #424c5f;
+}
+input::placeholder{
+color:#b2b6b9
+}
+.form-control-last{
+  transform: translateY(75%);
+}
+.form-control-middle{
+align-self: flex-end;
+}
+span.test{
+opacity: 1;
+}
+h1{
+    text-align: center;
+    margin: 20px 0 35px;
+    color: #FFF;
+    font-family: cursive;
+    font-size: 34px;
+}
